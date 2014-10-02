@@ -118,6 +118,12 @@ h2 {
 	padding-bottom: 40px;
 }
 
+#contact p {
+	padding-left: 49px;
+	padding-right: 49px;
+	padding-bottom: 20px;
+}
+
 #contact form {
 	margin-top: 30px;
 	margin-left: 40px;
