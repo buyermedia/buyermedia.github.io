@@ -1,64 +1,114 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-		<title>BuyerMedia - Consumer Content, Media & Delivery</title>
-		<link href="/css/style.css" rel="stylesheet" type="text/css"/>
-	</head>
-	<body>
-		<div id="topbar">
-			<div id="topbarcontent">
-				<div id="logo"></div>
-				<div id="navigation">
-					<a href="#whatwedo">What We Do</a>
-					<a href="#content">Content Serve</a>
-					<a href="#contact">Contact</a>
-				</div>
-			</div>
-		</div>
-		<div id="maincontent">
-			<div id="slider">
-				<h1>
-					We Serve Consumers Highly Desirable Content That Converts Their Interests to Purchase Decisions.
-				</h1>
-			</div>
-			<div id="whatwedo">
-				<h2>
-					<span style="font-family: Proxima Nova">What We Do</span><br/>
-					Serving High Growth Niches With a Superior Experience.
-				</h2>
-				<p>
-					We're building a network of websites to serve consumers in high growth niches with discounts, deals, reviews and editorial.
-					By focusing in this way we can deliver a superior experience for the end user and a laser focused audience for advertisers.
-				</p>
-				<img src="/img/process.png" />
-			</div>
-			<div id="content">
-				<h2>
-					<span style="font-family: Proxima Nova">BuyerMedia Content Serve</span><br/>
-					Opening The Door To User Engagement & Monetisation
-				</h2>
-				<p>
-					We're opening the door for businesses with sizeable digital audiences to monetise their users interests.
-					By working with us businesses can deliver vouchers, deals &amp; discounts relevant to their users which is a quality value add,
-					increases engagement and opens a new revenue stream in the process.
-				</p>
-			</div>
-			<div id="contact">
-				<h2>
-					<span style="font-family: Proxima Nova">Contact Us</span><br/>
-					We'd Like To Hear From You
-				</h2>
-				<!--<form action="http://server.buyermedia.co.uk/mail.php" method="POST">
-					<input name="name" placeholder="Name" type="text"/><br/>
-					<input name="email" placeholder="Email" type="email"/><br/>
-					<textarea name="comment" placeholder="And a short message..."></textarea><br/>
-					<input type="submit" value="Send!"/>
-				</form>-->
-				<p>
-					If you have any questions or want a chat then please feel free to drop us an email at <a href="mailto:hello@buyermedia.co.uk">hello@buyermedia.co.uk</a>.
-				</p>
-			</div>
-		</div>
-	</body>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>BuyerMedia - Consumer Content, Media &amp; Delivery</title>
+<link href="style.css" rel="stylesheet" type="text/css" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js" type="text/javascript"></script>
+<script src="scripts/waypoints.js" type="text/javascript"></script>
+<script src="scripts/waypoints-sticky.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(document).ready(function (){
+$("#button1").click(function (){
+$('html, body').animate({
+scrollTop: $("#whatwedo").offset().top -90}, 1000);});
+
+$("#button2").click(function (){
+$('html, body').animate({
+scrollTop: $("#contentservecontent").offset().top -90}, 1000);});
+
+$('a[href*=#whatwedo]').on('click', function(event){event.preventDefault();
+$('html,body').animate({scrollTop:$(this.hash).offset().top -90}, 1000);});
+
+$('a[href*=#contentservecontent]').on('click', function(event){event.preventDefault();
+$('html,body').animate({scrollTop:$(this.hash).offset().top -90}, 1000);});
+
+$('a[href*=#contactuscontent]').on('click', function(event){event.preventDefault();
+$('html,body').animate({scrollTop:$(this.hash).offset().top -90}, 1000);});
+$('#topbar').waypoint('sticky', {
+  direction: 'down',
+  stuckClass: 'stuck',
+  offset: -1
+});
+});
+</script>
+</head>
+
+<body>
+<div id="topbar">
+  <div id="topbarcontent">
+    <div id="logo"></div>
+    <div id="navigation"><a href="#whatwedo">What We Do</a><a href="#contentservecontent">Content Serve</a><a href="#contactuscontent">Contact</a></div>
+  </div>
+</div>
+<div id="maincontent">
+  <div id="slider">
+    <h1>We Serve Consumers Highly Desirable Content That Converts Their Interests to Perchase Decisions.</h1>
+    <div id="button1">For Consumers</div>
+    <div id="button2">For Businesses</div>
+  </div>
+  <div id="whatwedo">
+    <h2><span style="font-family: Proxima Nova">What We Do For Consumers</span><br />
+      Create Value At The Intersection Of Interest &amp; Decision.</h2>
+    <p>We're building a network of websites to serve consumers in high growth niches with discounts, deals, reviews and editorial. By focusing in this way we can deliver a superior experience for the end user and a laser focused audience for advertisers.</p>
+    <img src="images/process.png" alt="BuyerMedia Process" /></div>
+  <div id="contentservecontent">
+    <h2><span style="font-family: Proxima Nova">BuyerMedia Content Serve</span><br />
+      We Make It Easier For You To Monetize Your Users.</h2>
+    <p>We're opening the door for businesses with sizable digital audiences to monetize their users interests. By working with us businesses can deliver vouchers, deals &amp; discounts relevant to their users which is a quality value add, increases engagement and opens a new revenue stream in the process.</p>
+    <div id="contentservebenefits1">
+      <h3>Easy To Implement.</h3>
+      <ul>
+        <li>
+          <p>Simple API</p>
+          <p>Providing all the raw data that easily formats as required for an integrated and native feel.</p>
+        </li>
+        <li>
+          <p>Easy Tracking</p>
+          <p>Our dashboard provides insights into the activity generated from your promotions.</p>
+        </li>
+        <li>
+          <p>Hand Picked Content</p>
+          <p>We hand pick the vouchers suited to your users. Zero management needed.</p>
+        </li>
+      </ul>
+    </div>
+    <div id="contentservebenefits2">
+      <h3>Benefits For Businesses</h3>
+      <ul>
+        <li>
+          <p>Amplify Value</p>
+          <p>Serve up discounts and deals from brands <br />
+            that go hang in glove with your business.</p>
+        </li>
+        <li>
+          <p>Attraction Selling</p>
+          <p>Relevent discounts attract users to buy so you don't have to sell. They'll love you for it.</p>
+        </li>
+        <li>
+          <p>Intensify Loyalty</p>
+          <p>We keep your feed updated with fresh offers so your users will keep coming back for more.</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div id="contactuscontent" style="height: auto;">
+    <h2><span style="font-family: Proxima Nova">Contact Us</span><br />
+      We'd Like To Hear From You</h2>
+    <!--<form action="" method="post" name="contactus" target="_blank">
+      <input name="name" type="text" value="Name" title="Name" onfocus="if(this.value == 'Name') { this.value = ''; }" />
+      <br />
+      <input name="email" type="text" value="Email" title="Email" onfocus="if(this.value == 'Email') { this.value = ''; }" />
+      <br />
+      <textarea name="comments" cols="" rows=""></textarea>
+      <br />
+      <input name="submit" type="button" value="Submit" />
+    </form>-->
+	  <p style="text-align: center;">
+		  Drop us an email anytime at <a href="mailto:hello@buyermedia.co.uk">hello@buyermedia.co.uk</a>
+	  </p>
+  </div>
+  <div id="footercontent"> <a href="#whatwedo">What We Do</a><a href="#contentservecontent">Content Serve</a><a href="#contactuscontent">Contact</a> </div>
+</div>
+</body>
 </html>
